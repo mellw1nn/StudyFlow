@@ -232,3 +232,79 @@ footer {
     padding: 18px;
   }
 }
+
+/* Task form options */
+
+.task-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.task-options select,
+.task-toolbar select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d9ddec;
+  border-radius: 9px;
+  background: white;
+  font-size: 14px;
+}
+
+/* Search and filters */
+
+.task-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 170px;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.task-toolbar input {
+  width: 100%;
+}
+
+/* Task information */
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: #747b90;
+}
+
+.priority {
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.priority.High {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.priority.Medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.priority.Low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+@media (max-width: 600px) {
+  .task-options,
+  .task-toolbar {
+    grid-template-columns: 1fr;
+  }
+}

@@ -41,19 +41,53 @@
       <h2>My tasks</h2>
       <p class="muted">What do you need to get done?</p>
 
+      
       <form id="taskForm">
-        <label for="taskInput">Task name</label>
-        <div class="input-row">
-          <input
-            id="taskInput"
-            type="text"
-            placeholder="e.g. Revise data structures"
-            maxlength="120"
-            required
-          >
-          <button type="submit">Add task</button>
-        </div>
+      <label for="taskInput">Task name</label>
+      <div class="input-row">
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="e.g. Complete DSA assignment"
+        maxlength="120"
+        required
+      >
+      <button type="submit">Add task</button>
+      </div>
+
+      <div class="task-options">
+      <div>
+        <label for="dueDate">Due date</label>
+        <input id="dueDate" type="date">
+      </div>
+
+      <div>
+        <label for="priority">Priority</label>
+        <select id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      </div>
       </form>
+      
+    <div class="task-toolbar">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search your tasks..."
+        aria-label="Search tasks"
+      >
+
+      <select id="filterTasks" aria-label="Filter tasks">
+        <option value="all">All tasks</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+
+
 
       <ul id="taskList" aria-live="polite">
         <li id="emptyMessage" class="empty">
