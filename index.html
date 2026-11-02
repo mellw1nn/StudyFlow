@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyFlow | Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">Study Flow</a>
+    <span class="tagline">Your study space</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+      <h1>Make today count.</h1>
+      <p>Organize your assignments, one task at a time.</p>
+    </section>
+
+    <section class="stats" aria-label="Task statistics">
+      <article class="stat-card">
+        <span>Total tasks</span>
+        <strong id="totalCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Completed</span>
+        <strong id="completedCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Remaining</span>
+        <strong id="remainingCount">0</strong>
+      </article>
+    </section>
+
+    <section class="task-panel">
+      <h2>My tasks</h2>
+      <p class="muted">What do you need to get done?</p>
+
+      <form id="taskForm">
+        <label for="taskInput">Task name</label>
+        <div class="input-row">
+          <input
+            id="taskInput"
+            type="text"
+            placeholder="e.g. Revise data structures"
+            maxlength="120"
+            required
+          >
+          <button type="submit">Add task</button>
+        </div>
+      </form>
+
+      <ul id="taskList" aria-live="polite">
+        <li id="emptyMessage" class="empty">
+          No tasks yet. Add your first task above!
+        </li>
+      </ul>
+    </section>
+
+    <footer>“The beautiful thing about learning is that no one can take it away from you.” — B.B. King.</footer>
+  </main>
+</body>
+</html>
